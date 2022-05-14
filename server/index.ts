@@ -1,8 +1,10 @@
-import app from './app.js';
-import routes from './controllers/index.js';
+import { env } from 'node:process';
 
-const host = process.env.HOST || '0.0.0.0';
-const port = parseInt(process.env.PORT) || 3000;
+import app from './app';
+import routes from './controllers/index';
+
+const host = env.HOST || '0.0.0.0';
+const port = parseInt(env.PORT, 10) || 3000;
 
 routes.forEach((route) => {
   app[route.method](route.path, route.callback);

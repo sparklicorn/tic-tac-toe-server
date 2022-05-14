@@ -3,10 +3,10 @@ import React from 'react';
 class App extends React.Component {
   joinLobby() {
     console.log('joining lobby...');
-    fetch(`/join-lobby`, {
+    fetch('/join-lobby', {
       method: 'POST',
       mode: 'no-cors',
-      cache: 'no-cache'
+      cache: 'no-cache',
     });
   }
 
