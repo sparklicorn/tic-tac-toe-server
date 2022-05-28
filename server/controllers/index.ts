@@ -1,6 +1,12 @@
-import { postJoinLobby } from './lobby.js';
+import { postJoinLobby } from './Lobby.js';
+import {
+  postCreateGame,
+  postJoinGame
+} from './Game.js';
 
 // All the routing code indexed here will be loaded at startup.
 export default [
-  postJoinLobby
+  postJoinLobby,
+  postCreateGame,
+  postJoinGame
 ];
